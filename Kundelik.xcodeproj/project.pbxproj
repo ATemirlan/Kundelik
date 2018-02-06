@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07A36EF43ED574688755E406 /* Pods_Kundelik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E12A42A0C86310A87F5EF438 /* Pods_Kundelik.framework */; };
+		9141F46F200E069700D6B5E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9141F46E200E069700D6B5E0 /* AppDelegate.swift */; };
+		9141F474200E069700D6B5E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9141F472200E069700D6B5E0 /* Main.storyboard */; };
+		9141F476200E069700D6B5E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9141F475200E069700D6B5E0 /* Assets.xcassets */; };
+		9141F479200E069700D6B5E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9141F477200E069700D6B5E0 /* LaunchScreen.storyboard */; };
+		9185A4FD20158F9200A30B02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9185A4FC20158F9200A30B02 /* GoogleService-Info.plist */; };
+		9185A4FE2015963600A30B02 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9141F47A200E069700D6B5E0 /* Info.plist */; };
+		9185A5002016E99200A30B02 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185A4FF2016E99200A30B02 /* BaseViewController.swift */; };
+		9185A5022016E9E400A30B02 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185A5012016E9E400A30B02 /* DayViewController.swift */; };
+		9185A5052016EA6200A30B02 /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185A5032016EA6200A30B02 /* DayTableViewCell.swift */; };
+		9185A5062016EA6200A30B02 /* DayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9185A5042016EA6200A30B02 /* DayTableViewCell.xib */; };
+		9185A50B2016EB9F00A30B02 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185A50A2016EB9F00A30B02 /* Extensions.swift */; };
+		9185A50D2016EC9600A30B02 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185A50C2016EC9600A30B02 /* Router.swift */; };
+		9185A50F2016ED4800A30B02 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185A50E2016ED4800A30B02 /* PageViewController.swift */; };
+		91C68B61200E075600C3E0E7 /* RequestEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C68B60200E075600C3E0E7 /* RequestEngine.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D0A7F2BE1E1582DF474BA58 /* Pods-Kundelik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kundelik.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kundelik/Pods-Kundelik.release.xcconfig"; sourceTree = "<group>"; };
+		9141F46B200E069700D6B5E0 /* Kundelik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kundelik.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9141F46E200E069700D6B5E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9141F473200E069700D6B5E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9141F475200E069700D6B5E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9141F478200E069700D6B5E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9141F47A200E069700D6B5E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9185A4FC20158F9200A30B02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9185A4FF2016E99200A30B02 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9185A5012016E9E400A30B02 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		9185A5032016EA6200A30B02 /* DayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
+		9185A5042016EA6200A30B02 /* DayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayTableViewCell.xib; sourceTree = "<group>"; };
+		9185A50A2016EB9F00A30B02 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9185A50C2016EC9600A30B02 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9185A50E2016ED4800A30B02 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		91C68B60200E075600C3E0E7 /* RequestEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEngine.swift; sourceTree = "<group>"; };
+		B33033C8B194DD35A4CA9E50 /* Pods-Kundelik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kundelik.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kundelik/Pods-Kundelik.debug.xcconfig"; sourceTree = "<group>"; };
+		E12A42A0C86310A87F5EF438 /* Pods_Kundelik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kundelik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9141F468200E069700D6B5E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A36EF43ED574688755E406 /* Pods_Kundelik.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33A705CE437E4C377DD2C81A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B33033C8B194DD35A4CA9E50 /* Pods-Kundelik.debug.xcconfig */,
+				5D0A7F2BE1E1582DF474BA58 /* Pods-Kundelik.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E231736321EF633E56B1366 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E12A42A0C86310A87F5EF438 /* Pods_Kundelik.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9141F462200E069700D6B5E0 = {
+			isa = PBXGroup;
+			children = (
+				9141F46D200E069700D6B5E0 /* Kundelik */,
+				9141F46C200E069700D6B5E0 /* Products */,
+				33A705CE437E4C377DD2C81A /* Pods */,
+				4E231736321EF633E56B1366 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9141F46C200E069700D6B5E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9141F46B200E069700D6B5E0 /* Kundelik.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9141F46D200E069700D6B5E0 /* Kundelik */ = {
+			isa = PBXGroup;
+			children = (
+				9185A5082016EA7C00A30B02 /* Services */,
+				9185A5092016EA8400A30B02 /* View */,
+				9185A5072016EA6F00A30B02 /* Controller */,
+				9185A4FB20158F7600A30B02 /* SupportingFiles */,
+			);
+			path = Kundelik;
+			sourceTree = "<group>";
+		};
+		9185A4FB20158F7600A30B02 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9141F46E200E069700D6B5E0 /* AppDelegate.swift */,
+				9141F472200E069700D6B5E0 /* Main.storyboard */,
+				9141F475200E069700D6B5E0 /* Assets.xcassets */,
+				9141F477200E069700D6B5E0 /* LaunchScreen.storyboard */,
+				9141F47A200E069700D6B5E0 /* Info.plist */,
+				9185A4FC20158F9200A30B02 /* GoogleService-Info.plist */,
+				9185A50A2016EB9F00A30B02 /* Extensions.swift */,
+				9185A50C2016EC9600A30B02 /* Router.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		9185A5072016EA6F00A30B02 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9185A4FF2016E99200A30B02 /* BaseViewController.swift */,
+				9185A50E2016ED4800A30B02 /* PageViewController.swift */,
+				9185A5012016E9E400A30B02 /* DayViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9185A5082016EA7C00A30B02 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				91C68B60200E075600C3E0E7 /* RequestEngine.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9185A5092016EA8400A30B02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9185A5032016EA6200A30B02 /* DayTableViewCell.swift */,
+				9185A5042016EA6200A30B02 /* DayTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9141F46A200E069700D6B5E0 /* Kundelik */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9141F47D200E069700D6B5E0 /* Build configuration list for PBXNativeTarget "Kundelik" */;
+			buildPhases = (
+				EDE4D39B1A64D9324C0A046B /* [CP] Check Pods Manifest.lock */,
+				9141F467200E069700D6B5E0 /* Sources */,
+				9141F468200E069700D6B5E0 /* Frameworks */,
+				9141F469200E069700D6B5E0 /* Resources */,
+				DCBA829FFA04B9FAA4B2B178 /* [CP] Embed Pods Frameworks */,
+				D011044A19182D0328B62ABF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kundelik;
+			productName = Kundelik;
+			productReference = 9141F46B200E069700D6B5E0 /* Kundelik.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9141F463200E069700D6B5E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Alpysbayev;
+				TargetAttributes = {
+					9141F46A200E069700D6B5E0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9141F466200E069700D6B5E0 /* Build configuration list for PBXProject "Kundelik" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9141F462200E069700D6B5E0;
+			productRefGroup = 9141F46C200E069700D6B5E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9141F46A200E069700D6B5E0 /* Kundelik */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9141F469200E069700D6B5E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9185A4FE2015963600A30B02 /* Info.plist in Resources */,
+				9141F479200E069700D6B5E0 /* LaunchScreen.storyboard in Resources */,
+				9185A4FD20158F9200A30B02 /* GoogleService-Info.plist in Resources */,
+				9141F476200E069700D6B5E0 /* Assets.xcassets in Resources */,
+				9185A5062016EA6200A30B02 /* DayTableViewCell.xib in Resources */,
+				9141F474200E069700D6B5E0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D011044A19182D0328B62ABF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kundelik/Pods-Kundelik-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCBA829FFA04B9FAA4B2B178 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kundelik/Pods-Kundelik-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDE4D39B1A64D9324C0A046B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9141F467200E069700D6B5E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9185A5022016E9E400A30B02 /* DayViewController.swift in Sources */,
+				9185A50B2016EB9F00A30B02 /* Extensions.swift in Sources */,
+				9185A5002016E99200A30B02 /* BaseViewController.swift in Sources */,
+				9185A50D2016EC9600A30B02 /* Router.swift in Sources */,
+				9185A5052016EA6200A30B02 /* DayTableViewCell.swift in Sources */,
+				9141F46F200E069700D6B5E0 /* AppDelegate.swift in Sources */,
+				91C68B61200E075600C3E0E7 /* RequestEngine.swift in Sources */,
+				9185A50F2016ED4800A30B02 /* PageViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9141F472200E069700D6B5E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9141F473200E069700D6B5E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9141F477200E069700D6B5E0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9141F478200E069700D6B5E0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9141F47B200E069700D6B5E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9141F47C200E069700D6B5E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9141F47E200E069700D6B5E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B33033C8B194DD35A4CA9E50 /* Pods-Kundelik.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MP6RX32GWF;
+				INFOPLIST_FILE = Kundelik/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kun.delik.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9141F47F200E069700D6B5E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D0A7F2BE1E1582DF474BA58 /* Pods-Kundelik.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MP6RX32GWF;
+				INFOPLIST_FILE = Kundelik/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kun.delik.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9141F466200E069700D6B5E0 /* Build configuration list for PBXProject "Kundelik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9141F47B200E069700D6B5E0 /* Debug */,
+				9141F47C200E069700D6B5E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9141F47D200E069700D6B5E0 /* Build configuration list for PBXNativeTarget "Kundelik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9141F47E200E069700D6B5E0 /* Debug */,
+				9141F47F200E069700D6B5E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9141F463200E069700D6B5E0 /* Project object */;
+}
