@@ -21,7 +21,10 @@
 		9185A50B2016EB9F00A30B02 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185A50A2016EB9F00A30B02 /* Extensions.swift */; };
 		9185A50D2016EC9600A30B02 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185A50C2016EC9600A30B02 /* Router.swift */; };
 		9185A50F2016ED4800A30B02 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185A50E2016ED4800A30B02 /* PageViewController.swift */; };
+		9187DD44202AF821007784D6 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9187DD43202AF821007784D6 /* WeekViewController.swift */; };
+		9187DD46202AFBE5007784D6 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9187DD45202AFBE5007784D6 /* Weekday.swift */; };
 		91C68B61200E075600C3E0E7 /* RequestEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C68B60200E075600C3E0E7 /* RequestEngine.swift */; };
+		91F985A62029A63E00E776CC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F985A52029A63E00E776CC /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +43,10 @@
 		9185A50A2016EB9F00A30B02 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9185A50C2016EC9600A30B02 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9185A50E2016ED4800A30B02 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		9187DD43202AF821007784D6 /* WeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
+		9187DD45202AFBE5007784D6 /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
 		91C68B60200E075600C3E0E7 /* RequestEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEngine.swift; sourceTree = "<group>"; };
+		91F985A52029A63E00E776CC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		B33033C8B194DD35A4CA9E50 /* Pods-Kundelik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kundelik.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kundelik/Pods-Kundelik.debug.xcconfig"; sourceTree = "<group>"; };
 		E12A42A0C86310A87F5EF438 /* Pods_Kundelik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kundelik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,7 +119,7 @@
 				9141F47A200E069700D6B5E0 /* Info.plist */,
 				9185A4FC20158F9200A30B02 /* GoogleService-Info.plist */,
 				9185A50A2016EB9F00A30B02 /* Extensions.swift */,
-				9185A50C2016EC9600A30B02 /* Router.swift */,
+				91F985A52029A63E00E776CC /* DateExtension.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -124,6 +130,8 @@
 				9185A4FF2016E99200A30B02 /* BaseViewController.swift */,
 				9185A50E2016ED4800A30B02 /* PageViewController.swift */,
 				9185A5012016E9E400A30B02 /* DayViewController.swift */,
+				9187DD43202AF821007784D6 /* WeekViewController.swift */,
+				9185A50C2016EC9600A30B02 /* Router.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -141,6 +149,7 @@
 			children = (
 				9185A5032016EA6200A30B02 /* DayTableViewCell.swift */,
 				9185A5042016EA6200A30B02 /* DayTableViewCell.xib */,
+				9187DD45202AFBE5007784D6 /* Weekday.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,10 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9187DD44202AF821007784D6 /* WeekViewController.swift in Sources */,
 				9185A5022016E9E400A30B02 /* DayViewController.swift in Sources */,
+				9187DD46202AFBE5007784D6 /* Weekday.swift in Sources */,
 				9185A50B2016EB9F00A30B02 /* Extensions.swift in Sources */,
 				9185A5002016E99200A30B02 /* BaseViewController.swift in Sources */,
 				9185A50D2016EC9600A30B02 /* Router.swift in Sources */,
+				91F985A62029A63E00E776CC /* DateExtension.swift in Sources */,
 				9185A5052016EA6200A30B02 /* DayTableViewCell.swift in Sources */,
 				9141F46F200E069700D6B5E0 /* AppDelegate.swift in Sources */,
 				91C68B61200E075600C3E0E7 /* RequestEngine.swift in Sources */,

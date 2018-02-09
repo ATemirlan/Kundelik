@@ -8,16 +8,26 @@
 
 import UIKit
 
+protocol DayViewProtocol {
+    func set(current day: DayViewController)
+}
+
 class DayViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var page: Int!
+    var date: Date!
+    var delegate: DayViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: DayTableViewCell.nibName, bundle: nil),
                            forCellReuseIdentifier: DayTableViewCell.cellID)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        delegate?.set(current: self)
     }
     
 }
@@ -43,7 +53,7 @@ extension DayViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat.leastNormalMagnitude
+        return 8.0
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

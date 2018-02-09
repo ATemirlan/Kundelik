@@ -10,27 +10,22 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet var weekdays: [Weekday]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupPageViewController()
+        title = Date().toString()
+        
+        setupDaysViewController()
     }
     
-    func setupPageViewController() {
-        let pageViewController = Router.pageViewController(with: getDays(), frame: view.frame)
+    func setupDaysViewController() {
+        let pageViewController = Router.pageViewController(with: contentView.frame)
         addChildViewController(pageViewController)
-        view.addSubview(pageViewController.view)
+        contentView.addSubview(pageViewController.view)
     }
+
     
-    func getDays() -> [DayViewController] {
-        var days = [DayViewController]()
-        
-        for i in 0...6 {
-            let day = Router.dayViewController()
-            day.page = i
-            days.append(day)
-        }
-        
-        return days
-    }
     
 }

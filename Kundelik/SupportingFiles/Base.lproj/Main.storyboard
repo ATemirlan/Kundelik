@@ -10,17 +10,163 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Base View Controller-->
+        <!--Февраль - 2018-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="BaseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="BaseViewController" customModule="Kundelik" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0E3-np-wpb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KQb-F7-OG1">
+                                        <rect key="frame" x="0.0" y="8" width="375" height="18"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="П" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2U-Vd-4jK">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aq-Hs-NxP">
+                                                <rect key="frame" x="53.5" y="0.0" width="53.5" height="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="С" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyS-s7-ZhP">
+                                                <rect key="frame" x="107" y="0.0" width="53.5" height="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ч" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAF-qR-PY3">
+                                                <rect key="frame" x="160.5" y="0.0" width="54" height="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="П" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUO-tS-qbZ">
+                                                <rect key="frame" x="214.5" y="0.0" width="53.5" height="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="С" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ly7-Nx-a3k">
+                                                <rect key="frame" x="268" y="0.0" width="53.5" height="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbg-tS-Cyl">
+                                                <rect key="frame" x="321.5" y="0.0" width="53.5" height="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvg-oL-8cU">
+                                        <rect key="frame" x="0.0" y="26" width="375" height="54"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tQi-KW-Kgq">
+                                                <rect key="frame" x="0.0" y="12" width="375" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uK-sp-HGI" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="30"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eh2-GE-igU" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                                        <rect key="frame" x="53.5" y="0.0" width="53.5" height="30"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfm-3K-zak" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                                        <rect key="frame" x="107" y="0.0" width="53.5" height="30"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWF-Mx-YiF" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                                        <rect key="frame" x="160.5" y="0.0" width="54" height="30"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm6-ka-Ssv" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                                        <rect key="frame" x="214.5" y="0.0" width="53.5" height="30"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeW-uV-NWF" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                                        <rect key="frame" x="268" y="0.0" width="53.5" height="30"/>
+                                                        <state key="normal" title="10">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pna-YP-GJv" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                                        <rect key="frame" x="321.5" y="0.0" width="53.5" height="30"/>
+                                                        <state key="normal" title="11">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.97640901803970337" green="0.97651857137680054" blue="0.97634595632553101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="tQi-KW-Kgq" secondAttribute="trailing" id="14T-fH-YY4"/>
+                                            <constraint firstItem="tQi-KW-Kgq" firstAttribute="centerY" secondItem="cvg-oL-8cU" secondAttribute="centerY" id="5Qk-O5-8kS"/>
+                                            <constraint firstItem="tQi-KW-Kgq" firstAttribute="leading" secondItem="cvg-oL-8cU" secondAttribute="leading" id="bOM-ym-Vd1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97640901803970337" green="0.97651857137680054" blue="0.97634595632553101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="cvg-oL-8cU" firstAttribute="top" secondItem="KQb-F7-OG1" secondAttribute="bottom" id="4Rw-0o-sLf"/>
+                                    <constraint firstAttribute="bottom" secondItem="cvg-oL-8cU" secondAttribute="bottom" id="A3I-ts-ngb"/>
+                                    <constraint firstAttribute="height" constant="80" id="Qgk-CS-wmG"/>
+                                    <constraint firstItem="cvg-oL-8cU" firstAttribute="leading" secondItem="0E3-np-wpb" secondAttribute="leading" id="XFg-0B-Bac"/>
+                                    <constraint firstAttribute="trailing" secondItem="KQb-F7-OG1" secondAttribute="trailing" id="tUh-6G-MF6"/>
+                                    <constraint firstAttribute="trailing" secondItem="cvg-oL-8cU" secondAttribute="trailing" id="uIf-nZ-vGW"/>
+                                    <constraint firstItem="KQb-F7-OG1" firstAttribute="top" secondItem="0E3-np-wpb" secondAttribute="top" constant="8" id="yWf-Ng-zZ8"/>
+                                    <constraint firstItem="KQb-F7-OG1" firstAttribute="leading" secondItem="0E3-np-wpb" secondAttribute="leading" id="zcT-PM-ZLy"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPx-e7-Pwk">
+                                <rect key="frame" x="0.0" y="144" width="375" height="523"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RPx-e7-Pwk" secondAttribute="trailing" id="2Sp-4z-DpA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RPx-e7-Pwk" secondAttribute="bottom" id="8Bo-gM-LUl"/>
+                            <constraint firstItem="RPx-e7-Pwk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CCI-wh-3F9"/>
+                            <constraint firstItem="RPx-e7-Pwk" firstAttribute="top" secondItem="0E3-np-wpb" secondAttribute="bottom" id="FVq-n9-GUI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0E3-np-wpb" secondAttribute="trailing" id="jhC-5u-gpd"/>
+                            <constraint firstItem="0E3-np-wpb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="viS-GA-X2h"/>
+                            <constraint firstItem="0E3-np-wpb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zXm-UL-HOh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ICn-uQ-U05"/>
+                    <navigationItem key="navigationItem" title="Февраль - 2018" id="ICn-uQ-U05"/>
+                    <connections>
+                        <outlet property="contentView" destination="RPx-e7-Pwk" id="vnT-mn-56k"/>
+                        <outletCollection property="weekdays" destination="1uK-sp-HGI" collectionClass="NSMutableArray" id="fWj-Qr-ZQ2"/>
+                        <outletCollection property="weekdays" destination="Eh2-GE-igU" collectionClass="NSMutableArray" id="hRw-Hx-VWq"/>
+                        <outletCollection property="weekdays" destination="Yfm-3K-zak" collectionClass="NSMutableArray" id="WvT-0C-7hR"/>
+                        <outletCollection property="weekdays" destination="GWF-Mx-YiF" collectionClass="NSMutableArray" id="715-8T-rV8"/>
+                        <outletCollection property="weekdays" destination="gm6-ka-Ssv" collectionClass="NSMutableArray" id="gbp-st-hwY"/>
+                        <outletCollection property="weekdays" destination="aeW-uV-NWF" collectionClass="NSMutableArray" id="EaO-HO-z5V"/>
+                        <outletCollection property="weekdays" destination="pna-YP-GJv" collectionClass="NSMutableArray" id="jFO-5d-OcT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

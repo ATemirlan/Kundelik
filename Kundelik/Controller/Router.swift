@@ -10,16 +10,16 @@ import UIKit
 
 class Router {
     
-    static func pageViewController(with days: [DayViewController], frame: CGRect) -> PageViewController {
+    static func pageViewController(with frame: CGRect) -> PageViewController {
         let pageViewController = getViewController(with: PageViewController.className) as! PageViewController
-        pageViewController.days = days
-        pageViewController.set(days: days[0])
         pageViewController.view.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: frame.size)
         return pageViewController
     }
     
-    static func dayViewController() -> DayViewController {
-        return getViewController(with: DayViewController.className) as! DayViewController
+    static func dayViewController(with date: Date) -> DayViewController {
+        let day = getViewController(with: DayViewController.className) as! DayViewController
+        day.date = date
+        return day
     }
 
     private static func getViewController(with id: String) -> UIViewController {
