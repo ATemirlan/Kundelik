@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,47 +22,47 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0E3-np-wpb">
                                 <rect key="frame" x="0.0" y="64" width="375" height="80"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KQb-F7-OG1">
-                                        <rect key="frame" x="0.0" y="8" width="375" height="18"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KQb-F7-OG1">
+                                        <rect key="frame" x="8" y="8" width="359" height="18"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="П" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2U-Vd-4jK">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aq-Hs-NxP">
-                                                <rect key="frame" x="53.5" y="0.0" width="53.5" height="18"/>
+                                                <rect key="frame" x="52.5" y="0.0" width="44.5" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="С" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyS-s7-ZhP">
-                                                <rect key="frame" x="107" y="0.0" width="53.5" height="18"/>
+                                                <rect key="frame" x="105" y="0.0" width="44.5" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ч" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAF-qR-PY3">
-                                                <rect key="frame" x="160.5" y="0.0" width="54" height="18"/>
+                                                <rect key="frame" x="157.5" y="0.0" width="44" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="П" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUO-tS-qbZ">
-                                                <rect key="frame" x="214.5" y="0.0" width="53.5" height="18"/>
+                                                <rect key="frame" x="209.5" y="0.0" width="44.5" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="С" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ly7-Nx-a3k">
-                                                <rect key="frame" x="268" y="0.0" width="53.5" height="18"/>
+                                                <rect key="frame" x="262" y="0.0" width="44.5" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbg-tS-Cyl">
-                                                <rect key="frame" x="321.5" y="0.0" width="53.5" height="18"/>
+                                                <rect key="frame" x="314.5" y="0.0" width="44.5" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -69,74 +70,118 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvg-oL-8cU">
-                                        <rect key="frame" x="0.0" y="26" width="375" height="54"/>
+                                        <rect key="frame" x="8" y="28" width="359" height="52"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tQi-KW-Kgq">
-                                                <rect key="frame" x="0.0" y="12" width="375" height="30"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tQi-KW-Kgq">
+                                                <rect key="frame" x="0.0" y="2" width="359" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uK-sp-HGI" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="2" width="44.5" height="44"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="1uK-sp-HGI" secondAttribute="height" multiplier="1:1" id="yPc-ws-QVj"/>
+                                                        </constraints>
                                                         <state key="normal" title="5">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tDu-RZ-bk9"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eh2-GE-igU" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="53.5" y="0.0" width="53.5" height="30"/>
+                                                        <rect key="frame" x="52.5" y="2" width="44.5" height="44"/>
                                                         <state key="normal" title="6">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OOb-eg-Ros"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfm-3K-zak" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="107" y="0.0" width="53.5" height="30"/>
+                                                        <rect key="frame" x="105" y="2" width="44.5" height="44"/>
                                                         <state key="normal" title="7">
-                                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OxQ-69-XbE"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWF-Mx-YiF" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="160.5" y="0.0" width="54" height="30"/>
+                                                        <rect key="frame" x="157.5" y="2" width="44" height="44"/>
                                                         <state key="normal" title="8">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t79-Ug-Fvy"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm6-ka-Ssv" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="214.5" y="0.0" width="53.5" height="30"/>
+                                                        <rect key="frame" x="209.5" y="2" width="44.5" height="44"/>
                                                         <state key="normal" title="9">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s1M-37-yZW"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeW-uV-NWF" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="268" y="0.0" width="53.5" height="30"/>
+                                                        <rect key="frame" x="262" y="2" width="44.5" height="44"/>
                                                         <state key="normal" title="10">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PwK-9f-B2p"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pna-YP-GJv" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="321.5" y="0.0" width="53.5" height="30"/>
+                                                        <rect key="frame" x="314.5" y="2" width="44.5" height="44"/>
                                                         <state key="normal" title="11">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CVc-ae-Adm"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="1uK-sp-HGI" firstAttribute="top" secondItem="tQi-KW-Kgq" secondAttribute="top" constant="2" id="52V-O5-IdV"/>
+                                                    <constraint firstItem="Eh2-GE-igU" firstAttribute="height" secondItem="1uK-sp-HGI" secondAttribute="height" id="8wa-zA-wKG"/>
+                                                    <constraint firstItem="GWF-Mx-YiF" firstAttribute="height" secondItem="1uK-sp-HGI" secondAttribute="height" id="Ad1-8k-MaV"/>
+                                                    <constraint firstItem="Yfm-3K-zak" firstAttribute="height" secondItem="1uK-sp-HGI" secondAttribute="height" id="FKW-oR-FNB"/>
+                                                    <constraint firstItem="aeW-uV-NWF" firstAttribute="height" secondItem="1uK-sp-HGI" secondAttribute="height" id="GUa-tA-EiJ"/>
+                                                    <constraint firstItem="gm6-ka-Ssv" firstAttribute="height" secondItem="1uK-sp-HGI" secondAttribute="height" id="OcI-y8-daM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="1uK-sp-HGI" secondAttribute="bottom" constant="2" id="p2d-8K-hit"/>
+                                                    <constraint firstItem="pna-YP-GJv" firstAttribute="height" secondItem="1uK-sp-HGI" secondAttribute="height" id="s0q-a3-hXn"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.97640901803970337" green="0.97651857137680054" blue="0.97634595632553101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="tQi-KW-Kgq" secondAttribute="trailing" id="14T-fH-YY4"/>
                                             <constraint firstItem="tQi-KW-Kgq" firstAttribute="centerY" secondItem="cvg-oL-8cU" secondAttribute="centerY" id="5Qk-O5-8kS"/>
                                             <constraint firstItem="tQi-KW-Kgq" firstAttribute="leading" secondItem="cvg-oL-8cU" secondAttribute="leading" id="bOM-ym-Vd1"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2FO-0z-Y8t">
+                                        <rect key="frame" x="0.0" y="79" width="375" height="1"/>
+                                        <color key="backgroundColor" red="0.83916240930557251" green="0.83925729990005493" blue="0.8391076922416687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Txi-yt-I7C"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.97640901803970337" green="0.97651857137680054" blue="0.97634595632553101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="cvg-oL-8cU" firstAttribute="top" secondItem="KQb-F7-OG1" secondAttribute="bottom" id="4Rw-0o-sLf"/>
+                                    <constraint firstAttribute="trailing" secondItem="2FO-0z-Y8t" secondAttribute="trailing" id="4HG-ij-6ct"/>
+                                    <constraint firstItem="cvg-oL-8cU" firstAttribute="top" secondItem="KQb-F7-OG1" secondAttribute="bottom" constant="2" id="4Rw-0o-sLf"/>
                                     <constraint firstAttribute="bottom" secondItem="cvg-oL-8cU" secondAttribute="bottom" id="A3I-ts-ngb"/>
                                     <constraint firstAttribute="height" constant="80" id="Qgk-CS-wmG"/>
-                                    <constraint firstItem="cvg-oL-8cU" firstAttribute="leading" secondItem="0E3-np-wpb" secondAttribute="leading" id="XFg-0B-Bac"/>
-                                    <constraint firstAttribute="trailing" secondItem="KQb-F7-OG1" secondAttribute="trailing" id="tUh-6G-MF6"/>
-                                    <constraint firstAttribute="trailing" secondItem="cvg-oL-8cU" secondAttribute="trailing" id="uIf-nZ-vGW"/>
+                                    <constraint firstItem="cvg-oL-8cU" firstAttribute="leading" secondItem="0E3-np-wpb" secondAttribute="leading" constant="8" id="XFg-0B-Bac"/>
+                                    <constraint firstItem="2FO-0z-Y8t" firstAttribute="leading" secondItem="0E3-np-wpb" secondAttribute="leading" id="fkw-P5-ylE"/>
+                                    <constraint firstAttribute="trailing" secondItem="KQb-F7-OG1" secondAttribute="trailing" constant="8" id="tUh-6G-MF6"/>
+                                    <constraint firstAttribute="trailing" secondItem="cvg-oL-8cU" secondAttribute="trailing" constant="8" id="uIf-nZ-vGW"/>
+                                    <constraint firstAttribute="bottom" secondItem="2FO-0z-Y8t" secondAttribute="bottom" id="wPg-9J-zJn"/>
                                     <constraint firstItem="KQb-F7-OG1" firstAttribute="top" secondItem="0E3-np-wpb" secondAttribute="top" constant="8" id="yWf-Ng-zZ8"/>
-                                    <constraint firstItem="KQb-F7-OG1" firstAttribute="leading" secondItem="0E3-np-wpb" secondAttribute="leading" id="zcT-PM-ZLy"/>
+                                    <constraint firstItem="KQb-F7-OG1" firstAttribute="leading" secondItem="0E3-np-wpb" secondAttribute="leading" constant="8" id="zcT-PM-ZLy"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPx-e7-Pwk">
@@ -185,10 +230,10 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Kgl-it-3uA">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kgl-it-3uA" id="iZP-yj-CYV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -219,7 +264,7 @@
         <!--Page View Controller-->
         <scene sceneID="wrN-uW-s3O">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="pOH-gk-lud" customClass="PageViewController" customModule="Kundelik" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pOH-gk-lud" customClass="PageViewController" customModule="Kundelik" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOP-Ie-VhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1204" y="358"/>

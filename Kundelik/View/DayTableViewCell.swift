@@ -10,6 +10,8 @@ import UIKit
 
 class DayTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

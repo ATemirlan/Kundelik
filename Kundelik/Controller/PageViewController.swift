@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol PageControllerDelegate {
+    func pageChanged(date: Date)
+}
+
 class PageViewController: UIPageViewController {
 
     var currentDay = Router.dayViewController(with: Date())
+    var pageDelegate: PageControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +35,7 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
     func set(current day: DayViewController) {
         currentDay = day
         parent?.title = day.date.toString()
+        pageDelegate?.pageChanged(date: day.date)
     }
     
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
