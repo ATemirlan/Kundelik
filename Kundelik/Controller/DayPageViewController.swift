@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol PageControllerDelegate {
+protocol DayPageControllerDelegate {
     func pageChanged(date: Date)
 }
 
-class PageViewController: UIPageViewController {
+class DayPageViewController: UIPageViewController {
 
     var currentDay = Router.dayViewController(with: Date())
-    var pageDelegate: PageControllerDelegate?
+    var dayDelegate: DayPageControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +25,20 @@ class PageViewController: UIPageViewController {
     func setup() {
         delegate = self
         dataSource = self
-        setViewControllers([currentDay], direction: .forward, animated: true, completion: nil)
+        
+        setViewControllers([currentDay], direction: .forward, animated: false, completion: { (compleiton) in
+            self.currentDay.delegate = self
+        })
     }
 
 }
 
-extension PageViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate, DayViewProtocol {
+extension DayPageViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate, DayViewProtocol {
     
     func set(current day: DayViewController) {
         currentDay = day
         parent?.title = day.date.toString()
-        pageDelegate?.pageChanged(date: day.date)
+        dayDelegate?.pageChanged(date: day.date)
     }
     
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {

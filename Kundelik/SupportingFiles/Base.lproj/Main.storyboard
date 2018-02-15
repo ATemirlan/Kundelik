@@ -72,93 +72,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvg-oL-8cU">
                                         <rect key="frame" x="8" y="28" width="359" height="52"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tQi-KW-Kgq">
-                                                <rect key="frame" x="0.0" y="2" width="359" height="48"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uK-sp-HGI" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="2" width="44.5" height="44"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="1uK-sp-HGI" secondAttribute="height" multiplier="1:1" id="yPc-ws-QVj"/>
-                                                        </constraints>
-                                                        <state key="normal" title="5">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tDu-RZ-bk9"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eh2-GE-igU" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="52.5" y="2" width="44.5" height="44"/>
-                                                        <state key="normal" title="6">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OOb-eg-Ros"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfm-3K-zak" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="105" y="2" width="44.5" height="44"/>
-                                                        <state key="normal" title="7">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OxQ-69-XbE"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWF-Mx-YiF" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="157.5" y="2" width="44" height="44"/>
-                                                        <state key="normal" title="8">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t79-Ug-Fvy"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm6-ka-Ssv" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="209.5" y="2" width="44.5" height="44"/>
-                                                        <state key="normal" title="9">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s1M-37-yZW"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeW-uV-NWF" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="262" y="2" width="44.5" height="44"/>
-                                                        <state key="normal" title="10">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PwK-9f-B2p"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pna-YP-GJv" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
-                                                        <rect key="frame" x="314.5" y="2" width="44.5" height="44"/>
-                                                        <state key="normal" title="11">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CVc-ae-Adm"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="1uK-sp-HGI" firstAttribute="top" secondItem="tQi-KW-Kgq" secondAttribute="top" constant="2" id="52V-O5-IdV"/>
-                                                    <constraint firstItem="Eh2-GE-igU" firstAttribute="height" secondItem="1uK-sp-HGI" secondAttribute="height" id="8wa-zA-wKG"/>
-                                                    <constraint firstItem="GWF-Mx-YiF" firstAttribute="height" secondItem="1uK-sp-HGI" secondAttribute="height" id="Ad1-8k-MaV"/>
-                                                    <constraint firstItem="Yfm-3K-zak" firstAttribute="height" secondItem="1uK-sp-HGI" secondAttribute="height" id="FKW-oR-FNB"/>
-                                                    <constraint firstItem="aeW-uV-NWF" firstAttribute="height" secondItem="1uK-sp-HGI" secondAttribute="height" id="GUa-tA-EiJ"/>
-                                                    <constraint firstItem="gm6-ka-Ssv" firstAttribute="height" secondItem="1uK-sp-HGI" secondAttribute="height" id="OcI-y8-daM"/>
-                                                    <constraint firstAttribute="bottom" secondItem="1uK-sp-HGI" secondAttribute="bottom" constant="2" id="p2d-8K-hit"/>
-                                                    <constraint firstItem="pna-YP-GJv" firstAttribute="height" secondItem="1uK-sp-HGI" secondAttribute="height" id="s0q-a3-hXn"/>
-                                                </constraints>
-                                            </stackView>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADf-HE-vic">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="52"/>
+                                            </containerView>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="tQi-KW-Kgq" secondAttribute="trailing" id="14T-fH-YY4"/>
-                                            <constraint firstItem="tQi-KW-Kgq" firstAttribute="centerY" secondItem="cvg-oL-8cU" secondAttribute="centerY" id="5Qk-O5-8kS"/>
-                                            <constraint firstItem="tQi-KW-Kgq" firstAttribute="leading" secondItem="cvg-oL-8cU" secondAttribute="leading" id="bOM-ym-Vd1"/>
+                                            <constraint firstAttribute="trailing" secondItem="ADf-HE-vic" secondAttribute="trailing" id="6c6-Pm-YB2"/>
+                                            <constraint firstItem="ADf-HE-vic" firstAttribute="leading" secondItem="cvg-oL-8cU" secondAttribute="leading" id="LjU-dE-Wj4"/>
+                                            <constraint firstItem="ADf-HE-vic" firstAttribute="top" secondItem="cvg-oL-8cU" secondAttribute="top" id="hrY-e2-VEt"/>
+                                            <constraint firstAttribute="bottom" secondItem="ADf-HE-vic" secondAttribute="bottom" id="wIy-nL-zly"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2FO-0z-Y8t">
@@ -203,19 +126,21 @@
                     </view>
                     <navigationItem key="navigationItem" title="Февраль - 2018" id="ICn-uQ-U05"/>
                     <connections>
-                        <outlet property="contentView" destination="RPx-e7-Pwk" id="vnT-mn-56k"/>
-                        <outletCollection property="weekdays" destination="1uK-sp-HGI" collectionClass="NSMutableArray" id="fWj-Qr-ZQ2"/>
-                        <outletCollection property="weekdays" destination="Eh2-GE-igU" collectionClass="NSMutableArray" id="hRw-Hx-VWq"/>
-                        <outletCollection property="weekdays" destination="Yfm-3K-zak" collectionClass="NSMutableArray" id="WvT-0C-7hR"/>
-                        <outletCollection property="weekdays" destination="GWF-Mx-YiF" collectionClass="NSMutableArray" id="715-8T-rV8"/>
-                        <outletCollection property="weekdays" destination="gm6-ka-Ssv" collectionClass="NSMutableArray" id="gbp-st-hwY"/>
-                        <outletCollection property="weekdays" destination="aeW-uV-NWF" collectionClass="NSMutableArray" id="EaO-HO-z5V"/>
-                        <outletCollection property="weekdays" destination="pna-YP-GJv" collectionClass="NSMutableArray" id="jFO-5d-OcT"/>
+                        <outlet property="dayContainer" destination="RPx-e7-Pwk" id="VtG-bp-reZ"/>
+                        <outlet property="weekContainer" destination="ADf-HE-vic" id="818-fr-CQl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="364" y="358.4707646176912"/>
+        </scene>
+        <!--Week Page View Controller-->
+        <scene sceneID="JFM-lU-EpD">
+            <objects>
+                <pageViewController storyboardIdentifier="WeekPageViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="0ao-Xy-IDE" customClass="WeekPageViewController" customModule="Kundelik" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dwa-Gh-eLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114" y="-39"/>
         </scene>
         <!--Day View Controller-->
         <scene sceneID="kby-qi-FMf">
@@ -230,10 +155,10 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Kgl-it-3uA">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kgl-it-3uA" id="iZP-yj-CYV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -259,15 +184,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DR2-j7-EXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="1046"/>
+            <point key="canvasLocation" x="1890" y="753"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Day Page View Controller-->
         <scene sceneID="wrN-uW-s3O">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pOH-gk-lud" customClass="PageViewController" customModule="Kundelik" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="DayPageViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pOH-gk-lud" customClass="DayPageViewController" customModule="Kundelik" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOP-Ie-VhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="358"/>
+            <point key="canvasLocation" x="1114" y="753"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RNP-Ds-lTR">
@@ -286,6 +211,117 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZhI-rz-4cp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-412" y="358"/>
+        </scene>
+        <!--Week View Controller-->
+        <scene sceneID="for-rY-xM6">
+            <objects>
+                <viewController storyboardIdentifier="WeekViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pki-yU-Gci" customClass="WeekViewController" customModule="Kundelik" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K0J-To-Tk9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZVF-Da-bEy">
+                                <rect key="frame" x="0.0" y="308.5" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmT-iV-qUh" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="2" width="46.5" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="JmT-iV-qUh" secondAttribute="height" multiplier="1:1" id="D6K-1e-8oe"/>
+                                        </constraints>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectDay:" destination="pki-yU-Gci" eventType="touchUpInside" id="868-zP-tvj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOq-z7-zne" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                        <rect key="frame" x="54.5" y="2" width="47" height="46"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectDay:" destination="pki-yU-Gci" eventType="touchUpInside" id="Wbe-sm-VyP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbi-zm-RUY" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                        <rect key="frame" x="109.5" y="2" width="46.5" height="46"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectDay:" destination="pki-yU-Gci" eventType="touchUpInside" id="pkJ-gd-hv3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWd-6t-Cet" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                        <rect key="frame" x="164" y="2" width="47" height="46"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectDay:" destination="pki-yU-Gci" eventType="touchUpInside" id="jJm-qa-6vJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1L-1u-Jkj" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                        <rect key="frame" x="219" y="2" width="46.5" height="46"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectDay:" destination="pki-yU-Gci" eventType="touchUpInside" id="TgP-az-1yn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3H-Dt-XFT" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                        <rect key="frame" x="273.5" y="2" width="47" height="46"/>
+                                        <state key="normal" title="10">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectDay:" destination="pki-yU-Gci" eventType="touchUpInside" id="ehe-vV-aQL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9H-xg-AhA" customClass="Weekday" customModule="Kundelik" customModuleProvider="target">
+                                        <rect key="frame" x="328.5" y="2" width="46.5" height="46"/>
+                                        <state key="normal" title="11">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectDay:" destination="pki-yU-Gci" eventType="touchUpInside" id="eqa-Ye-wPh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="N3H-Dt-XFT" firstAttribute="height" secondItem="JmT-iV-qUh" secondAttribute="height" id="0DQ-Z0-Wnu"/>
+                                    <constraint firstItem="pWd-6t-Cet" firstAttribute="height" secondItem="JmT-iV-qUh" secondAttribute="height" id="1VR-0x-rh0"/>
+                                    <constraint firstItem="zbi-zm-RUY" firstAttribute="height" secondItem="JmT-iV-qUh" secondAttribute="height" id="IBg-7s-6sF"/>
+                                    <constraint firstItem="JmT-iV-qUh" firstAttribute="top" secondItem="ZVF-Da-bEy" secondAttribute="top" constant="2" id="LsF-rQ-VbO"/>
+                                    <constraint firstAttribute="bottom" secondItem="JmT-iV-qUh" secondAttribute="bottom" constant="2" id="UiU-Aq-uhl"/>
+                                    <constraint firstItem="NOq-z7-zne" firstAttribute="height" secondItem="JmT-iV-qUh" secondAttribute="height" id="pFJ-8z-B2o"/>
+                                    <constraint firstItem="Q9H-xg-AhA" firstAttribute="height" secondItem="JmT-iV-qUh" secondAttribute="height" id="sSy-IZ-5fw"/>
+                                    <constraint firstItem="w1L-1u-Jkj" firstAttribute="height" secondItem="JmT-iV-qUh" secondAttribute="height" id="yH6-OW-lqJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZVF-Da-bEy" secondAttribute="trailing" id="Ikq-0y-QpX"/>
+                            <constraint firstItem="ZVF-Da-bEy" firstAttribute="centerY" secondItem="K0J-To-Tk9" secondAttribute="centerY" id="bUI-Am-yav"/>
+                            <constraint firstItem="ZVF-Da-bEy" firstAttribute="leading" secondItem="K0J-To-Tk9" secondAttribute="leading" id="pOG-h1-nB0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="weekdays" destination="JmT-iV-qUh" collectionClass="NSMutableArray" id="qlN-ah-7SJ"/>
+                        <outletCollection property="weekdays" destination="NOq-z7-zne" collectionClass="NSMutableArray" id="s0U-Gb-Lr7"/>
+                        <outletCollection property="weekdays" destination="zbi-zm-RUY" collectionClass="NSMutableArray" id="1RI-cL-qct"/>
+                        <outletCollection property="weekdays" destination="pWd-6t-Cet" collectionClass="NSMutableArray" id="1OX-gR-z13"/>
+                        <outletCollection property="weekdays" destination="w1L-1u-Jkj" collectionClass="NSMutableArray" id="PWm-Vp-cEs"/>
+                        <outletCollection property="weekdays" destination="N3H-Dt-XFT" collectionClass="NSMutableArray" id="MIr-Ac-O3u"/>
+                        <outletCollection property="weekdays" destination="Q9H-xg-AhA" collectionClass="NSMutableArray" id="045-C4-CAT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JjV-SY-p31" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850" y="-39"/>
         </scene>
     </scenes>
 </document>

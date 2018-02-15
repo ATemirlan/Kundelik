@@ -65,6 +65,14 @@ extension Date {
         return gregorian.date(byAdding: .day, value: 7, to: sunday)
     }
     
+    var weekBefore: Date {
+        return Calendar.current.date(byAdding: .weekOfYear, value: -1, to: noon)!
+    }
+    
+    var weekAfter: Date {
+        return Calendar.current.date(byAdding: .weekOfYear, value: 1, to: noon)!
+    }
+    
     var yesterday: Date {
         return Calendar.current.date(byAdding: .day, value: -1, to: noon)!
     }
