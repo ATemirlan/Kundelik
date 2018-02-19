@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Февраль - 2018-->
+        <!--Base View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="BaseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="BaseViewController" customModule="Kundelik" customModuleProvider="target" sceneMemberID="viewController">
@@ -124,7 +124,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Февраль - 2018" id="ICn-uQ-U05"/>
+                    <navigationItem key="navigationItem" id="ICn-uQ-U05">
+                        <barButtonItem key="leftBarButtonItem" image="calendar" id="UhL-MH-AQ9">
+                            <connections>
+                                <segue destination="50y-zD-4Yb" kind="custom" customClass="DeckSegue" customModule="DeckTransition" id="tAc-CL-sbx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dayContainer" destination="RPx-e7-Pwk" id="VtG-bp-reZ"/>
                         <outlet property="weekContainer" destination="ADf-HE-vic" id="818-fr-CQl"/>
@@ -134,13 +140,98 @@
             </objects>
             <point key="canvasLocation" x="364" y="358.4707646176912"/>
         </scene>
+        <!--Ib Calendar Data Source-->
+        <scene sceneID="zkL-Dg-umW">
+            <objects>
+                <viewController id="50y-zD-4Yb" customClass="CalendarViewController" customModule="Kundelik" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="txD-UU-gUh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IV-Zz-oqB">
+                                <rect key="frame" x="170.5" y="0.0" width="34" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="6p1-0f-g53"/>
+                                    <constraint firstAttribute="width" constant="34" id="wf6-pD-RUr"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="down">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="50y-zD-4Yb" eventType="touchUpInside" id="WlT-uP-KPl"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dxP-DI-gXK" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
+                                <rect key="frame" x="0.0" y="208" width="375" height="271"/>
+                                <color key="backgroundColor" red="0.93053645360000004" green="0.93053645360000004" blue="0.93053645360000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="271" id="4pa-t3-WAV"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lCA-UB-gmM">
+                                    <size key="itemSize" width="153" height="133"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="4EM-iZ-TF8" customClass="CellView" customModule="JTAppleCalendar_iOS_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="133"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="153" height="133"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGM-aa-kdv">
+                                                    <rect key="frame" x="59" y="56" width="34.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="aGM-aa-kdv" firstAttribute="centerX" secondItem="4EM-iZ-TF8" secondAttribute="centerX" id="CqM-FB-TqD"/>
+                                            <constraint firstItem="aGM-aa-kdv" firstAttribute="centerY" secondItem="4EM-iZ-TF8" secondAttribute="centerY" id="Qam-kS-T4L"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="aGM-aa-kdv" id="aHN-rR-YlK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="ibCalendarDataSource" destination="50y-zD-4Yb" id="id6-m4-Iuh"/>
+                                    <outlet property="ibCalendarDelegate" destination="50y-zD-4Yb" id="G9B-l4-CQp"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dxP-DI-gXK" firstAttribute="trailing" secondItem="5rL-ky-bHk" secondAttribute="trailing" id="Gzq-OX-3zy"/>
+                            <constraint firstItem="dxP-DI-gXK" firstAttribute="centerY" secondItem="5rL-ky-bHk" secondAttribute="centerY" id="LME-35-1WT"/>
+                            <constraint firstItem="3IV-Zz-oqB" firstAttribute="centerX" secondItem="5rL-ky-bHk" secondAttribute="centerX" id="ODH-UD-sl6"/>
+                            <constraint firstItem="dxP-DI-gXK" firstAttribute="leading" secondItem="5rL-ky-bHk" secondAttribute="leading" id="gWo-vL-cDl"/>
+                            <constraint firstItem="3IV-Zz-oqB" firstAttribute="top" secondItem="txD-UU-gUh" secondAttribute="top" id="ydF-dc-b8r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5rL-ky-bHk"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="3IV-Zz-oqB" id="Xry-Cr-Iz7"/>
+                        <outlet property="calendarView" destination="dxP-DI-gXK" id="he2-LS-gPS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kst-wK-RGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="-330"/>
+        </scene>
         <!--Week Page View Controller-->
         <scene sceneID="JFM-lU-EpD">
             <objects>
                 <pageViewController storyboardIdentifier="WeekPageViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="0ao-Xy-IDE" customClass="WeekPageViewController" customModule="Kundelik" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwa-Gh-eLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="-39"/>
+            <point key="canvasLocation" x="-2020" y="-35"/>
         </scene>
         <!--Day View Controller-->
         <scene sceneID="kby-qi-FMf">
@@ -155,10 +246,10 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Kgl-it-3uA">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kgl-it-3uA" id="iZP-yj-CYV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -184,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DR2-j7-EXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1890" y="753"/>
+            <point key="canvasLocation" x="-1244" y="790"/>
         </scene>
         <!--Day Page View Controller-->
         <scene sceneID="wrN-uW-s3O">
@@ -192,7 +283,7 @@
                 <pageViewController storyboardIdentifier="DayPageViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pOH-gk-lud" customClass="DayPageViewController" customModule="Kundelik" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOP-Ie-VhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="753"/>
+            <point key="canvasLocation" x="-2020" y="790"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RNP-Ds-lTR">
@@ -308,6 +399,7 @@
                             <constraint firstItem="ZVF-Da-bEy" firstAttribute="centerY" secondItem="K0J-To-Tk9" secondAttribute="centerY" id="bUI-Am-yav"/>
                             <constraint firstItem="ZVF-Da-bEy" firstAttribute="leading" secondItem="K0J-To-Tk9" secondAttribute="leading" id="pOG-h1-nB0"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="WXV-uR-rAt"/>
                     </view>
                     <connections>
                         <outletCollection property="weekdays" destination="JmT-iV-qUh" collectionClass="NSMutableArray" id="qlN-ah-7SJ"/>
@@ -321,7 +413,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjV-SY-p31" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1850" y="-39"/>
+            <point key="canvasLocation" x="-1244" y="-35"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar" width="22" height="22"/>
+        <image name="down" width="48" height="48"/>
+    </resources>
 </document>

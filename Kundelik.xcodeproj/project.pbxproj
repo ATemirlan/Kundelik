@@ -22,6 +22,10 @@
 		9185A50D2016EC9600A30B02 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185A50C2016EC9600A30B02 /* Router.swift */; };
 		9185A50F2016ED4800A30B02 /* DayPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185A50E2016ED4800A30B02 /* DayPageViewController.swift */; };
 		9187DD46202AFBE5007784D6 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9187DD45202AFBE5007784D6 /* Weekday.swift */; };
+		91A6A6D9203A8BCC0059C6F0 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A6A6D8203A8BCC0059C6F0 /* CalendarViewController.swift */; };
+		91A6A6DB203A8EC00059C6F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A6A6DA203A8EC00059C6F0 /* Constants.swift */; };
+		91A6A6DE203AC2C90059C6F0 /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A6A6DC203AC2C80059C6F0 /* CellView.xib */; };
+		91A6A6DF203AC2C90059C6F0 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A6A6DD203AC2C90059C6F0 /* CellView.swift */; };
 		91AF576C20353DAF00902FF7 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF576B20353DAF00902FF7 /* WeekViewController.swift */; };
 		91AF576E20353FC000902FF7 /* WeekPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF576D20353FC000902FF7 /* WeekPageViewController.swift */; };
 		91C68B61200E075600C3E0E7 /* RequestEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C68B60200E075600C3E0E7 /* RequestEngine.swift */; };
@@ -45,6 +49,10 @@
 		9185A50C2016EC9600A30B02 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9185A50E2016ED4800A30B02 /* DayPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPageViewController.swift; sourceTree = "<group>"; };
 		9187DD45202AFBE5007784D6 /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
+		91A6A6D8203A8BCC0059C6F0 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		91A6A6DA203A8EC00059C6F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		91A6A6DC203AC2C80059C6F0 /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
+		91A6A6DD203AC2C90059C6F0 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		91AF576B20353DAF00902FF7 /* WeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
 		91AF576D20353FC000902FF7 /* WeekPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPageViewController.swift; sourceTree = "<group>"; };
 		91C68B60200E075600C3E0E7 /* RequestEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEngine.swift; sourceTree = "<group>"; };
@@ -123,6 +131,7 @@
 				9185A4FC20158F9200A30B02 /* GoogleService-Info.plist */,
 				9185A50A2016EB9F00A30B02 /* Extensions.swift */,
 				91F985A52029A63E00E776CC /* DateExtension.swift */,
+				91A6A6DA203A8EC00059C6F0 /* Constants.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -135,6 +144,7 @@
 				91AF576B20353DAF00902FF7 /* WeekViewController.swift */,
 				9185A50E2016ED4800A30B02 /* DayPageViewController.swift */,
 				9185A5012016E9E400A30B02 /* DayViewController.swift */,
+				91A6A6D8203A8BCC0059C6F0 /* CalendarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -150,6 +160,8 @@
 		9185A5092016EA8400A30B02 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				91A6A6DD203AC2C90059C6F0 /* CellView.swift */,
+				91A6A6DC203AC2C80059C6F0 /* CellView.xib */,
 				9185A5032016EA6200A30B02 /* DayTableViewCell.swift */,
 				9185A5042016EA6200A30B02 /* DayTableViewCell.xib */,
 				9187DD45202AFBE5007784D6 /* Weekday.swift */,
@@ -222,6 +234,7 @@
 				9185A4FE2015963600A30B02 /* Info.plist in Resources */,
 				9141F479200E069700D6B5E0 /* LaunchScreen.storyboard in Resources */,
 				9185A4FD20158F9200A30B02 /* GoogleService-Info.plist in Resources */,
+				91A6A6DE203AC2C90059C6F0 /* CellView.xib in Resources */,
 				9141F476200E069700D6B5E0 /* Assets.xcassets in Resources */,
 				9185A5062016EA6200A30B02 /* DayTableViewCell.xib in Resources */,
 				9141F474200E069700D6B5E0 /* Main.storyboard in Resources */,
@@ -291,8 +304,11 @@
 				91F985A62029A63E00E776CC /* DateExtension.swift in Sources */,
 				9185A5052016EA6200A30B02 /* DayTableViewCell.swift in Sources */,
 				9141F46F200E069700D6B5E0 /* AppDelegate.swift in Sources */,
+				91A6A6D9203A8BCC0059C6F0 /* CalendarViewController.swift in Sources */,
 				91C68B61200E075600C3E0E7 /* RequestEngine.swift in Sources */,
 				91AF576C20353DAF00902FF7 /* WeekViewController.swift in Sources */,
+				91A6A6DF203AC2C90059C6F0 /* CellView.swift in Sources */,
+				91A6A6DB203A8EC00059C6F0 /* Constants.swift in Sources */,
 				9185A50F2016ED4800A30B02 /* DayPageViewController.swift in Sources */,
 				91AF576E20353FC000902FF7 /* WeekPageViewController.swift in Sources */,
 			);

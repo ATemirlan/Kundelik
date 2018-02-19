@@ -15,8 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        FirebaseApp.configure()
+        setupNavigationBarAppearance()
         return true
+    }
+    
+    func setupNavigationBarAppearance() {
+        UINavigationBar.appearance().tintColor = Constants.Color.redColor
+        
     }
 
 }
