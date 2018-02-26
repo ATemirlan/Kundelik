@@ -41,6 +41,18 @@ extension UITableViewCell {
     
 }
 
+extension UICollectionViewCell {
+    
+    static var cellID: String {
+        return className
+    }
+    
+    static var nibName: String {
+        return className
+    }
+    
+}
+
 extension NSObject {
     
     var className: String {

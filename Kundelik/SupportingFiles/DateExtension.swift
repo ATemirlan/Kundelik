@@ -33,6 +33,7 @@ extension Date {
         dateFormatter.dateFormat = "dd MMMM. yyyy"
         return dateFormatter.string(from: self)
     }
+    
     func toStringDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -63,6 +64,14 @@ extension Date {
         gregorian.firstWeekday = 2
         guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
         return gregorian.date(byAdding: .day, value: 7, to: sunday)
+    }
+    
+    var yearsBefore: Date {
+        return Calendar.current.date(byAdding: .year, value: -2, to: noon)!
+    }
+    
+    var yearsAfter: Date {
+        return Calendar.current.date(byAdding: .year, value: 2, to: noon)!
     }
     
     var weekBefore: Date {

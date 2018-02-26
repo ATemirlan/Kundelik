@@ -9,44 +9,65 @@
 import UIKit
 import JTAppleCalendar
 
+protocol CalendarProtocol {
+    func newDateChoosed(newDate: Date?)
+}
+
 class CalendarViewController: UIViewController {
 
-    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
+    @IBOutlet weak var monthLabel: UIBarButtonItem!
     
+    var currentDate: Date!
+    var delegate: CalendarProtocol?
     let formatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        backButton.setTitleColor(Constants.Color.redColor, for: .normal)
+        setup()
     }
-
-    @IBAction func close(_ sender: UIButton) {
+    
+    func setup() {
+        view.backgroundColor = UIColor.gray.withAlphaComponent(0.0)
+        calendarView.scrollToDate(currentDate,
+                                  triggerScrollToDateDelegate: true,
+                                  animateScroll: false,
+                                  preferredScrollPosition: nil,
+                                  extraAddedOffset: 0.0,
+                                  completionHandler: nil)
+        
+        calendarView.register(UINib(nibName: CalendarCollectionViewCell.nibName, bundle: nil),
+                              forCellWithReuseIdentifier: CalendarCollectionViewCell.cellID)
+    }
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        delegate?.newDateChoosed(newDate: nil)
         dismiss(animated: true, completion: nil)
     }
     
-    func setupViewsOfCalendar(from visibleDates: DateSegmentInfo) {
-//        guard let startDate = visibleDates.monthDates.first?.date else {
-//            return
-//        }
-//
-//        let month = Calendar.current.dateComponents([.month], from: startDate).month!
-//        let monthName = DateFormatter().monthSymbols[(month-1) % 12]
-//        let year = Calendar.current.component(.year, from: startDate)
-    }
-    
     func configureCell(view: JTAppleCell?, cellState: CellState) {
-        guard let myCustomCell = view as? CellView  else { return }
+        guard let myCustomCell = view as? CalendarCollectionViewCell  else { return }
         handleCellTextColor(view: myCustomCell, cellState: cellState)
     }
     
-    func handleCellTextColor(view: CellView, cellState: CellState) {
+    func handleCellTextColor(view: CalendarCollectionViewCell, cellState: CellState) {
         if cellState.dateBelongsTo == .thisMonth {
-            view.dayLabel.textColor = UIColor.black
+            view.set(selected: cellState.date.toStringDate() == currentDate.toStringDate())
         } else {
+            view.set(selected: false)
             view.dayLabel.textColor = UIColor.gray
         }
+    }
+    
+    func setupViewsOfCalendar(from visibleDates: DateSegmentInfo) {
+        guard let startDate = visibleDates.monthDates.first?.date else {
+            return
+        }
+        
+        let month = Calendar.current.dateComponents([.month], from: startDate).month!
+        let monthName = DateFormatter().monthSymbols[(month-1) % 12]
+        let year = Calendar.current.component(.year, from: startDate)
+        monthLabel.title = "\(year) \(monthName)"
     }
     
 }
@@ -58,24 +79,23 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
     }
     
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
-        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "cell", for: indexPath) as! CellView
+        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: CalendarCollectionViewCell.cellID, for: indexPath) as! CalendarCollectionViewCell
         
-        cell.dayLabel .text = cellState.text
+        cell.dayLabel.text = cellState.text
         configureCell(view: cell, cellState: cellState)
     
         return cell
     }
     
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-        formatter.dateFormat = "yyyy MM dd"
-        formatter.timeZone = Calendar.current.timeZone
-        formatter.locale = Calendar.current.locale
-        
-        
-        let startDate = formatter.date(from: "2017 01 01")!
-        let endDate = formatter.date(from: "2030 02 01")!
-        
-        let parameters = ConfigurationParameters(startDate: startDate,endDate: endDate)
+        let parameters = ConfigurationParameters(startDate: Date().yearsBefore,
+                                                 endDate: Date().yearsAfter,
+                                                 numberOfRows: nil,
+                                                 calendar: nil,
+                                                 generateInDates: nil,
+                                                 generateOutDates: nil,
+                                                 firstDayOfWeek: .monday,
+                                                 hasStrictBoundaries: nil)
         return parameters
     }
     
@@ -84,16 +104,8 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        configureCell(view: cell, cellState: cellState)
-    }
-    
-    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        configureCell(view: cell, cellState: cellState)
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        calendarView.viewWillTransition(to: size, with: coordinator, anchorDate: Date())
-        print("transition")
+        delegate?.newDateChoosed(newDate: date)
+        dismiss(animated: true, completion: nil)
     }
     
 }

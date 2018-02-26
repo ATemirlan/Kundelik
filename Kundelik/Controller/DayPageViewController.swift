@@ -14,17 +14,24 @@ protocol DayPageControllerDelegate {
 
 class DayPageViewController: UIPageViewController {
 
-    var currentDay = Router.dayViewController(with: Date())
+    var date: Date!
+    var currentDay: DayViewController!
     var dayDelegate: DayPageControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setup()
     }
     
     func setup() {
         delegate = self
         dataSource = self
+        
+        currentDay = Router.dayViewController(with: date)
         
         setViewControllers([currentDay], direction: .forward, animated: false, completion: { (compleiton) in
             self.currentDay.delegate = self

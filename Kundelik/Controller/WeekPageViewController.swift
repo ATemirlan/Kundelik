@@ -14,18 +14,24 @@ protocol WeekPageControllerDelegate {
 
 class WeekPageViewController: UIPageViewController {
 
-    var currentWeek = Router.weekViewController(with: Date())
-    
+    var date: Date!
+    var currentWeek: WeekViewController!
     var weekDelegate: WeekPageControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setup()
     }
     
     func setup() {
         delegate = self
         dataSource = self
+        
+        currentWeek = Router.weekViewController(with: date)
         
         setViewControllers([currentWeek], direction: .forward, animated: false, completion: { (compleiton) in
             self.currentWeek.delegate = self
