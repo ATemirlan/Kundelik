@@ -28,7 +28,6 @@
 		91A6A6DB203A8EC00059C6F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A6A6DA203A8EC00059C6F0 /* Constants.swift */; };
 		91AF576C20353DAF00902FF7 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF576B20353DAF00902FF7 /* WeekViewController.swift */; };
 		91AF576E20353FC000902FF7 /* WeekPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF576D20353FC000902FF7 /* WeekPageViewController.swift */; };
-		91C68B61200E075600C3E0E7 /* RequestEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C68B60200E075600C3E0E7 /* RequestEngine.swift */; };
 		91F985A62029A63E00E776CC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F985A52029A63E00E776CC /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +54,6 @@
 		91A6A6DA203A8EC00059C6F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		91AF576B20353DAF00902FF7 /* WeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
 		91AF576D20353FC000902FF7 /* WeekPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPageViewController.swift; sourceTree = "<group>"; };
-		91C68B60200E075600C3E0E7 /* RequestEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEngine.swift; sourceTree = "<group>"; };
 		91F985A52029A63E00E776CC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		B33033C8B194DD35A4CA9E50 /* Pods-Kundelik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kundelik.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kundelik/Pods-Kundelik.debug.xcconfig"; sourceTree = "<group>"; };
 		E12A42A0C86310A87F5EF438 /* Pods_Kundelik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kundelik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,7 +150,6 @@
 		9185A5082016EA7C00A30B02 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				91C68B60200E075600C3E0E7 /* RequestEngine.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -306,7 +303,6 @@
 				9141F46F200E069700D6B5E0 /* AppDelegate.swift in Sources */,
 				9105A64C2043FCA200E5E801 /* CalendarCollectionViewCell.swift in Sources */,
 				91A6A6D9203A8BCC0059C6F0 /* CalendarViewController.swift in Sources */,
-				91C68B61200E075600C3E0E7 /* RequestEngine.swift in Sources */,
 				91AF576C20353DAF00902FF7 /* WeekViewController.swift in Sources */,
 				91A6A6DB203A8EC00059C6F0 /* Constants.swift in Sources */,
 				9185A50F2016ED4800A30B02 /* DayPageViewController.swift in Sources */,
