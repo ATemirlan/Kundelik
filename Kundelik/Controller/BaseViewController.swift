@@ -29,10 +29,12 @@ class BaseViewController: UIViewController, WeekPageControllerDelegate, DayPageC
         setupNavigationController()
         setupWeekViewController()
         setupDaysViewController()
+        setEmptyBackButton()
     }
     
     func setupNavigationController() {
         title = choosedDate.toString()
+        
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
     }

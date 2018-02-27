@@ -24,7 +24,10 @@ class DayPageViewController: UIPageViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setup()
+        
+        if currentDay == nil {
+            setup()
+        }
     }
     
     func setup() {

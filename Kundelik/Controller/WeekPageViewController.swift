@@ -24,7 +24,10 @@ class WeekPageViewController: UIPageViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setup()
+        
+        if currentWeek == nil {
+            setup()
+        }
     }
     
     func setup() {

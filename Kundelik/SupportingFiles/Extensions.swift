@@ -19,8 +19,34 @@ extension UIViewController {
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
         tabBarController?.navigationItem.backBarButtonItem = backItem
-        navigationController?.navigationBar.tintColor = .white //UIColor().backItemColor
+        navigationController?.navigationBar.tintColor = .red
         navigationController?.navigationBar.isTranslucent = true
+    }
+    
+    func showSpinner(deadline: Double, completion: @escaping () -> Void) {
+        guard let window = UIApplication.shared.keyWindow else {
+            return
+        }
+        
+        let dimView = UIView(frame: window.frame)
+        dimView.backgroundColor = UIColor.black.withAlphaComponent(0.25)
+        
+        let spinnerView = UIView(frame: CGRect(x: dimView.center.x - 16.0, y: dimView.center.y - 16.0, width: 64.0, height: 64.0))
+        spinnerView.layer.cornerRadius = 8.0
+        spinnerView.backgroundColor = .white
+        
+        let spinner = UIActivityIndicatorView(frame: CGRect(x: 0.0, y: 0.0, width: 64.0, height: 64.0))
+        spinner.activityIndicatorViewStyle = .gray
+        
+        spinnerView.addSubview(spinner)
+        dimView.addSubview(spinnerView)
+        window.addSubview(dimView)
+        spinner.startAnimating()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + deadline) {
+            dimView.removeFromSuperview()
+            completion()
+        }
     }
     
     @objc func hideKeyBoard(){
