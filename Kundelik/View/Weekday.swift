@@ -23,7 +23,7 @@ class Weekday: UIButton {
     }
     
     func set(selected: Bool) {
-        backgroundColor = selected ? .red : .white
+        backgroundColor = selected ? Constants.Color.redColor : .white
         setTitleColor(selected ? .white : .black, for: .normal)
     }
 

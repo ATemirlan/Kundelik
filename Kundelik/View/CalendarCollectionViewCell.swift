@@ -20,7 +20,7 @@ class CalendarCollectionViewCell: JTAppleCell {
     }
     
     func set(selected: Bool) {
-        selectedView.backgroundColor = selected ? .red : .white
+        selectedView.backgroundColor = selected ? Constants.Color.redColor : .white
         dayLabel.textColor = selected ? .white : .black
     }
 

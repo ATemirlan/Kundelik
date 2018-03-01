@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class BaseViewController: UIViewController, WeekPageControllerDelegate, DayPageControllerDelegate, CalendarProtocol {
 
@@ -23,6 +24,10 @@ class BaseViewController: UIViewController, WeekPageControllerDelegate, DayPageC
         self.blurView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
         return self.blurView
     }()
+    
+    var events = List<Event>()
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
