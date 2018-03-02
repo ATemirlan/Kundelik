@@ -52,6 +52,18 @@ extension UIViewController {
     @objc func hideKeyBoard(){
         view.endEditing(true)
     }
+    
+    func backViewController() -> UIViewController? {
+        if let stack = self.navigationController?.viewControllers {
+            for i in (1..<stack.count).reversed() {
+                if stack[i] == self {
+                    return stack[i-1]
+                }
+            }
+        }
+        
+        return nil
+    }
 
 }
 

@@ -29,7 +29,7 @@ class RealmController {
         let event = Event()
         event.title = eventTitle
         
-        do{
+        do {
             try realm?.write {
                 realm?.add(event)
             }
@@ -38,16 +38,23 @@ class RealmController {
         }
     }
     
-    func getEvents() -> Results<Event>? {
+    func getEvents(completion: @escaping (_ events: Results<Event>?) -> Void) {
         guard let events = realm?.objects(Event.self) else {
-            return nil
+            completion(nil)
+            return
         }
         
-        return events
+        completion(events)
     }
     
-    func removeEvents() {
-        
+    func remove(event: Event) {
+        do {
+            try realm?.write {
+                realm?.delete(event)
+            }
+        } catch (let error) {
+            print(error)
+        }
     }
     
 }

@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class BaseViewController: UIViewController, WeekPageControllerDelegate, DayPageControllerDelegate, CalendarProtocol {
+class BaseViewController: UIViewController, WeekPageControllerDelegate, DayPageControllerDelegate, CalendarProtocol, NewEventProtocol {
 
     @IBOutlet weak var dayContainer: UIView!
     @IBOutlet weak var weekContainer: UIView!
@@ -25,16 +25,19 @@ class BaseViewController: UIViewController, WeekPageControllerDelegate, DayPageC
         return self.blurView
     }()
     
-    var events = List<Event>()
-    
-
+    var events: Results<Event>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationController()
-        setupWeekViewController()
-        setupDaysViewController()
+        
         setEmptyBackButton()
+   
+        RealmController.shared.getEvents { (events) in
+            self.events = events
+            self.setupNavigationController()
+            self.setupWeekViewController()
+            self.setupDaysViewController()
+        }
     }
     
     func setupNavigationController() {
@@ -42,14 +45,6 @@ class BaseViewController: UIViewController, WeekPageControllerDelegate, DayPageC
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-    }
-    
-    func setupDaysViewController(with date: Date = Date()) {
-        dayPageViewController = Router.dayPageViewController(with: dayContainer.frame)
-        dayPageViewController.dayDelegate = self
-        dayPageViewController.date = date
-        addChildViewController(dayPageViewController)
-        dayContainer.addSubview(dayPageViewController.view)
     }
     
     func setupWeekViewController(with date: Date = Date()) {
@@ -60,8 +55,21 @@ class BaseViewController: UIViewController, WeekPageControllerDelegate, DayPageC
         weekContainer.addSubview(weekPageViewController.view)
     }
     
+    func setupDaysViewController(with date: Date = Date()) {
+        dayPageViewController = Router.dayPageViewController(with: dayContainer.frame)
+        dayPageViewController.dayDelegate = self
+        dayPageViewController.date = date
+        dayPageViewController.events = events
+        addChildViewController(dayPageViewController)
+        dayContainer.addSubview(dayPageViewController.view)
+    }
+    
     @IBAction func showCalendar(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: CalendarViewController.segueID, sender: choosedDate)
+    }
+    
+    @IBAction func addNewEvent(_ sender: UIButton) {
+        performSegue(withIdentifier: "NewEventNavigationController", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -70,6 +78,25 @@ class BaseViewController: UIViewController, WeekPageControllerDelegate, DayPageC
             let calendarVC = segue.destination as! CalendarViewController
             calendarVC.delegate = self
             calendarVC.currentDate = sender as! Date
+        } else if segue.identifier == "NewEventNavigationController" {
+            let navvc = segue.destination as! UINavigationController
+            
+            for vc in navvc.viewControllers {
+                if vc.className == NewEventTableViewController.className {
+                    (vc as! NewEventTableViewController).delegate = self
+                }
+            }
+        }
+    }
+    
+    // MARK: - New event Delegate
+    
+    func newEventAdded() {
+        RealmController.shared.getEvents { (events) in
+            self.events = events
+            
+            self.dayPageViewController.removeFromParentViewController()
+            self.setupDaysViewController(with: self.choosedDate)
         }
     }
     
@@ -85,11 +112,15 @@ class BaseViewController: UIViewController, WeekPageControllerDelegate, DayPageC
         title = date.toString()
         choosedDate = date
         
-        weekPageViewController.removeFromParentViewController()
-        setupWeekViewController(with: date)
-        
-        dayPageViewController.removeFromParentViewController()
-        setupDaysViewController(with: date)
+        RealmController.shared.getEvents { (events) in
+            self.events = events
+            
+            self.weekPageViewController.removeFromParentViewController()
+            self.setupWeekViewController(with: date)
+            
+            self.dayPageViewController.removeFromParentViewController()
+            self.setupDaysViewController(with: date)
+        }
     }
     
     // MARK: - Day Delegate
@@ -110,7 +141,7 @@ class BaseViewController: UIViewController, WeekPageControllerDelegate, DayPageC
             return
         }
         
-        let newDay = Router.dayViewController(with: date)
+        let newDay = Router.dayViewController(with: date, events: events)
         newDay.delegate = dayPageViewController
         
         dayPageViewController.setViewControllers([newDay], direction: date.compare(choosedDate).rawValue == 1 ? .forward : .reverse, animated: true, completion: { (completed) in

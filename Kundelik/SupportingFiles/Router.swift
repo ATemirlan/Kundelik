@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class Router {
     
@@ -28,8 +29,9 @@ class Router {
         return pageViewController
     }
     
-    static func dayViewController(with date: Date) -> DayViewController {
+    static func dayViewController(with date: Date, events: Results<Event>?) -> DayViewController {
         let day = getViewController(with: DayViewController.className) as! DayViewController
+        day.events = events
         day.date = date
         return day
     }

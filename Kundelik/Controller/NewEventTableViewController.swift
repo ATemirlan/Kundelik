@@ -8,13 +8,34 @@
 
 import UIKit
 
+protocol NewEventProtocol {
+    func newEventAdded()
+}
+
 class NewEventTableViewController: UITableViewController {
 
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    
     @IBOutlet weak var repeatSwitch: UISwitch!
     @IBOutlet weak var notificationSwitch: UISwitch!
+    @IBOutlet weak var titleField: UITextField!
+    
+    var delegate: NewEventProtocol?
+    
+    var event: Event?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addButton.isEnabled = false
+        
+        if event == nil {
+            event = Event()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(event?.title)
     }
 
     @IBAction func cancel(_ sender: UIBarButtonItem) {
@@ -22,6 +43,12 @@ class NewEventTableViewController: UITableViewController {
     }
     
     @IBAction func add(_ sender: UIBarButtonItem) {
+        guard let title = titleField.text, title.count > 0 else {
+            return
+        }
+        
+        RealmController.shared.add(eventTitle: title)
+        delegate?.newEventAdded()
         dismiss(animated: true, completion: nil)
     }
     
@@ -30,6 +57,20 @@ class NewEventTableViewController: UITableViewController {
     }
     
     @IBAction func shouldNotify(_ sender: UISwitch) {
+        
+    }
+    
+}
+
+extension NewEventTableViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let text = textField.text, text.count > 0 {
+            addButton.isEnabled = true
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         
     }
     

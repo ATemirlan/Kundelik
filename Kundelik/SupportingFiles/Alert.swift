@@ -26,4 +26,14 @@ class Alert {
         vc.present(alert, animated: true, completion: nil)
     }
     
+    static func showActionSheet(vc: UIViewController, title: String?, message: String?, actions: [UIAlertAction]) {
+        let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        
+        for action in actions {
+            actionSheet.addAction(action)
+        }
+        
+        vc.present(actionSheet, animated: true, completion: nil)
+    }
+    
 }
