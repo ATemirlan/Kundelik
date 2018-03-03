@@ -36,6 +36,10 @@
 		91A6A6DB203A8EC00059C6F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A6A6DA203A8EC00059C6F0 /* Constants.swift */; };
 		91AF576C20353DAF00902FF7 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF576B20353DAF00902FF7 /* WeekViewController.swift */; };
 		91AF576E20353FC000902FF7 /* WeekPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AF576D20353FC000902FF7 /* WeekPageViewController.swift */; };
+		91DEABE9204A58CE00956D4C /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DEABE8204A58CE00956D4C /* DateViewController.swift */; };
+		91DEABED204A647500956D4C /* WeekdayGray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DEABEC204A647500956D4C /* WeekdayGray.swift */; };
+		91DEABEF204A65A000956D4C /* IntervalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DEABEE204A65A000956D4C /* IntervalTableViewController.swift */; };
+		91DEABF1204A94FF00956D4C /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DEABF0204A94FF00956D4C /* DatePickerViewController.swift */; };
 		91F985A62029A63E00E776CC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F985A52029A63E00E776CC /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +74,10 @@
 		91A6A6DA203A8EC00059C6F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		91AF576B20353DAF00902FF7 /* WeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
 		91AF576D20353FC000902FF7 /* WeekPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPageViewController.swift; sourceTree = "<group>"; };
+		91DEABE8204A58CE00956D4C /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		91DEABEC204A647500956D4C /* WeekdayGray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayGray.swift; sourceTree = "<group>"; };
+		91DEABEE204A65A000956D4C /* IntervalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTableViewController.swift; sourceTree = "<group>"; };
+		91DEABF0204A94FF00956D4C /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		91F985A52029A63E00E776CC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		B33033C8B194DD35A4CA9E50 /* Pods-Kundelik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kundelik.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kundelik/Pods-Kundelik.debug.xcconfig"; sourceTree = "<group>"; };
 		E12A42A0C86310A87F5EF438 /* Pods_Kundelik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kundelik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +187,9 @@
 				913D409F2045114A0090D198 /* KundelikViewController.swift */,
 				9113175D20466FC5000204C7 /* NewEventTableViewController.swift */,
 				9199860E20495236003D51ED /* CategoryViewController.swift */,
+				91DEABE8204A58CE00956D4C /* DateViewController.swift */,
+				91DEABEE204A65A000956D4C /* IntervalTableViewController.swift */,
+				91DEABF0204A94FF00956D4C /* DatePickerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +199,7 @@
 			children = (
 				9141F472200E069700D6B5E0 /* Main.storyboard */,
 				9187DD45202AFBE5007784D6 /* Weekday.swift */,
+				91DEABEC204A647500956D4C /* WeekdayGray.swift */,
 				9185A5032016EA6200A30B02 /* DayTableViewCell.swift */,
 				9185A5042016EA6200A30B02 /* DayTableViewCell.xib */,
 				9105A64A2043FCA200E5E801 /* CalendarCollectionViewCell.swift */,
@@ -330,13 +342,16 @@
 				9185A50B2016EB9F00A30B02 /* Extensions.swift in Sources */,
 				913D40A4204550370090D198 /* Alert.swift in Sources */,
 				9185A5002016E99200A30B02 /* BaseViewController.swift in Sources */,
+				91DEABED204A647500956D4C /* WeekdayGray.swift in Sources */,
 				9185A50D2016EC9600A30B02 /* Router.swift in Sources */,
+				91DEABE9204A58CE00956D4C /* DateViewController.swift in Sources */,
 				911317602046AD85000204C7 /* Event.swift in Sources */,
 				9199860F20495236003D51ED /* CategoryViewController.swift in Sources */,
 				91F985A62029A63E00E776CC /* DateExtension.swift in Sources */,
 				913D40A2204516CC0090D198 /* ProfileViewController.swift in Sources */,
 				9185A5052016EA6200A30B02 /* DayTableViewCell.swift in Sources */,
 				9141F46F200E069700D6B5E0 /* AppDelegate.swift in Sources */,
+				91DEABF1204A94FF00956D4C /* DatePickerViewController.swift in Sources */,
 				9198D7732047BA1B0034B895 /* RealmController.swift in Sources */,
 				9105A64C2043FCA200E5E801 /* CalendarCollectionViewCell.swift in Sources */,
 				9113175E20466FC5000204C7 /* NewEventTableViewController.swift in Sources */,
@@ -347,6 +362,7 @@
 				9185A50F2016ED4800A30B02 /* DayPageViewController.swift in Sources */,
 				91AF576E20353FC000902FF7 /* WeekPageViewController.swift in Sources */,
 				913D40A02045114A0090D198 /* KundelikViewController.swift in Sources */,
+				91DEABEF204A65A000956D4C /* IntervalTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

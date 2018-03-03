@@ -25,10 +25,7 @@ class RealmController {
         }
     }
     
-    func add(eventTitle: String) {
-        let event = Event()
-        event.title = eventTitle
-        
+    func add(event: Event) {
         do {
             try realm?.write {
                 realm?.add(event)

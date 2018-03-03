@@ -8,16 +8,40 @@
 
 import RealmSwift
 
+enum Interval: Int {
+    case never = -1
+    case everyDay = -2
+    case everyWeek = -3
+    case every2Weeks = -4
+    case everyMonth = -5
+    case everyYear = -6
+}
+
 final class Event: Object {
     
     @objc dynamic var title = ""
+    @objc dynamic var category = ""
     
-//    @objc dynamic var startTime: Date
-//    @objc dynamic var endTime: Date
-//    
-//    @objc dynamic var startDate: Date
-//    @objc dynamic var endDate: Date
-//    
-//    @objc dynamic var interval: Int
+    @objc dynamic var startTime: Date? = nil
+    @objc dynamic var endTime: Date? = nil
+
+    @objc dynamic let startDate = Date()
+    @objc dynamic var endDate: Date? = nil
+    
+    @objc dynamic var interval: Int = Interval.never.rawValue
+    @objc dynamic var shouldNotify = false
+    
+    func dump() {
+        print("----------------")
+        print("Title: \(title)")
+        print("Category: \(category)")
+        print("Start time: \(startTime))")
+        print("End time: \(endTime))")
+        print("Start date: \(startDate))")
+        print("End date: \(endDate))")
+        print("Interval: \(interval))")
+        print("Should notify: \(shouldNotify))")
+        print("----------------")
+    }
     
 }

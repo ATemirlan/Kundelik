@@ -49,7 +49,7 @@ extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDe
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = backViewController() as? NewEventTableViewController {
-            vc.event?.title = categoryTitles[indexPath.row]
+            vc.event?.category = categoryTitles[indexPath.row]
             navigationController?.popViewController(animated: true)
         }
     }

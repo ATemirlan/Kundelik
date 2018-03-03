@@ -20,12 +20,18 @@ class NewEventTableViewController: UITableViewController {
     @IBOutlet weak var notificationSwitch: UISwitch!
     @IBOutlet weak var titleField: UITextField!
     
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var endDateLabel: UILabel!
+    
     var delegate: NewEventProtocol?
     
     var event: Event?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setEmptyBackButton()
         addButton.isEnabled = false
         
         if event == nil {
@@ -35,9 +41,35 @@ class NewEventTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(event?.title)
+//        event?.dump()
+        updateUI()
     }
 
+    func updateUI() {
+        categoryLabel.isHidden = true
+        timeLabel.isHidden = true
+        endDateLabel.isHidden = true
+        
+        if let title = event?.title {
+            titleField.text = title
+        }
+        
+        if let category = event?.category {
+            categoryLabel.text = category
+            categoryLabel.isHidden = false
+        }
+        
+        if let startTime = event?.startTime?.toTime(), let endTime = event?.endTime?.toTime() {
+            timeLabel.text = "\(startTime) - \(endTime)"
+            timeLabel.isHidden = false
+        }
+        
+        if let endDate = event?.endDate?.toString() {
+            endDateLabel.text = endDate
+            endDateLabel.isHidden = false
+        }
+    }
+    
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
@@ -47,9 +79,11 @@ class NewEventTableViewController: UITableViewController {
             return
         }
         
-        RealmController.shared.add(eventTitle: title)
-        delegate?.newEventAdded()
-        dismiss(animated: true, completion: nil)
+        if let event = event {
+            RealmController.shared.add(event: event)
+            delegate?.newEventAdded()
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func shouldRepeat(_ sender: UISwitch) {
@@ -57,7 +91,7 @@ class NewEventTableViewController: UITableViewController {
     }
     
     @IBAction func shouldNotify(_ sender: UISwitch) {
-        
+        event?.shouldNotify = sender.isOn
     }
     
 }
@@ -66,6 +100,7 @@ extension NewEventTableViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let text = textField.text, text.count > 0 {
+            event?.title = text
             addButton.isEnabled = true
         }
     }
@@ -76,7 +111,7 @@ extension NewEventTableViewController: UITextFieldDelegate {
     
 }
 
-extension NewEventTableViewController {
+extension NewEventTableViewController: DatePickerProtocol {
     
     // MARK: - Table view data source
     
@@ -97,14 +132,37 @@ extension NewEventTableViewController {
         }
     }
     
-    /*
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
-     }
-     */
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            if indexPath == IndexPath(row: 2, section: 1) {
+                self.performSegue(withIdentifier: DatePickerViewController.segueID, sender: self.event)
+            } else if indexPath == IndexPath(row: 1, section: 1) {
+                self.performSegue(withIdentifier: IntervalTableViewController.segueID, sender: self.event)
+            } else if indexPath == IndexPath(row: 2, section: 0) {
+                self.performSegue(withIdentifier: DateViewController.segueID, sender: self.event)
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == DatePickerViewController.segueID {
+            let vc = segue.destination as! DatePickerViewController
+            vc.modalPresentationStyle = .overFullScreen
+            vc.delegate = self
+            vc.event = (sender as! Event)
+        } else if segue.identifier == IntervalTableViewController.segueID {
+            let vc = segue.destination as! IntervalTableViewController
+            vc.modalPresentationStyle = .overFullScreen
+            vc.event = (sender as! Event)
+        } else if segue.identifier == DateViewController.segueID {
+            let vc = segue.destination as! DateViewController
+            vc.event = (sender as! Event)
+        }
+    }
+    
+    func dateChoosed(date: Date) {
+        event?.endDate = date
+        updateUI()
+    }
     
 }

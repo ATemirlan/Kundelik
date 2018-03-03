@@ -52,6 +52,12 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    func toTime() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: self)
+    }
+    
     var startOfWeek: Date? {
         var gregorian = Calendar(identifier: .gregorian)
         gregorian.firstWeekday = 2

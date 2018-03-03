@@ -79,7 +79,7 @@ extension DayViewController: UITableViewDataSource, UITableViewDelegate {
         DispatchQueue.main.async {
             Alert.showActionSheet(vc: baseVC, title: nil, message: "Выберите действие", actions: [
                 UIAlertAction(title: "Изменить", style: .default, handler: { (action) in
-                    
+                    Router.showChangeViewController(event: event, at: self)
                 }),
                 
                 UIAlertAction(title: "Удалить", style: .destructive, handler: { (action) in
@@ -87,9 +87,7 @@ extension DayViewController: UITableViewDataSource, UITableViewDelegate {
                     baseVC.newEventAdded()
                 }),
                 
-                UIAlertAction(title: "Отменить", style: .cancel, handler: { (action) in
-                    
-                })
+                UIAlertAction(title: "Отменить", style: .cancel, handler: { (action) in })
             ])
         }
     }

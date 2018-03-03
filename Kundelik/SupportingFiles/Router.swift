@@ -36,6 +36,13 @@ class Router {
         return day
     }
 
+    static func showChangeViewController(event: Event?, at: UIViewController) {
+        let navvc = getViewController(with: "NavigationController") as! UINavigationController
+        let newEventVC = navvc.viewControllers[0] as! NewEventTableViewController
+        newEventVC.event = event
+        at.present(navvc, animated: true, completion: nil)
+    }
+    
     private static func getViewController(with id: String) -> UIViewController {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: id)
