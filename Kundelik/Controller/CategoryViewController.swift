@@ -14,6 +14,7 @@ class CategoryViewController: UIViewController {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     private let categoryTitles = ["Образование", "Работа", "Спорт", "Дополнительные занятия", "Транспорт", "Развлечения", "Другое"]
+    private let categoryIcons = ["education", "work", "sport", "extra", "transport", "fun", "another"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,7 @@ extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDe
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.className, for: indexPath) as! CategoryCollectionViewCell
         
         cell.title.text = categoryTitles[indexPath.row]
+        cell.image.image = UIImage(named: categoryIcons[indexPath.row])
         
         return cell
     }
@@ -50,6 +52,7 @@ extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = backViewController() as? NewEventTableViewController {
             vc.event?.category = categoryTitles[indexPath.row]
+            vc.event?.categoryIcon = categoryIcons[indexPath.row]
             navigationController?.popViewController(animated: true)
         }
     }

@@ -21,6 +21,7 @@ final class Event: Object {
     
     @objc dynamic var title = ""
     @objc dynamic var category = ""
+    @objc dynamic var categoryIcon = ""
     
     @objc dynamic var startTime: Date? = nil
     @objc dynamic var endTime: Date? = nil
@@ -30,6 +31,14 @@ final class Event: Object {
     
     @objc dynamic var interval: Int = Interval.never.rawValue
     @objc dynamic var shouldNotify = false
+    
+    func canSave() -> Bool {
+        if title.count > 0, category.count > 0, categoryIcon.count > 0, startTime != nil, endTime != nil {
+            return true
+        }
+        
+        return false
+    }
     
     func dump() {
         print("----------------")

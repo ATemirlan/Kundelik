@@ -26,7 +26,7 @@ class DatePickerViewController: UIViewController {
         
         if let endDate = event?.endDate {
             datePicker.date = endDate
-            datePicker.minimumDate = endDate
+            datePicker.minimumDate = Date()
         }
     }
 
@@ -35,6 +35,7 @@ class DatePickerViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: UIBarButtonItem) {
+        print(datePicker.date)
         delegate?.dateChoosed(date: datePicker.date)
         dismiss(animated: true, completion: nil)
     }

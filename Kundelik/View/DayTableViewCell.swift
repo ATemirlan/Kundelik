@@ -11,9 +11,18 @@ import UIKit
 class DayTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    func setup(with event: Event) {
+        titleLabel.text = event.title
+        iconView.image = UIImage(named: event.categoryIcon)
+        
+        guard let start = event.startTime?.toTime(), let end = event.endTime?.toTime() else {
+            return
+        }
+        
+        dateLabel.text = "\(start) - \(end)"
     }
     
 }

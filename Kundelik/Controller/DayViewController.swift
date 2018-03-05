@@ -21,6 +21,7 @@ class DayViewController: UIViewController {
     var delegate: DayViewProtocol?
     
     var events: Results<Event>?
+    private var todayEvents = List<Event>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,44 @@ class DayViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         delegate?.set(current: self)
+        filterEvents()
+    }
+    
+    func filterEvents() {
+        guard let events = events, events.count > 0 else {
+            return
+        }
+        
+        todayEvents = List<Event>()
+
+        for e in events {
+            e.dump()
+            if (compare(e.startDate, date) == .orderedAscending && compare(e.endDate!, date) == .orderedDescending) || compare(e.startDate, date) == .orderedSame {
+                switch e.interval {
+                case Interval.everyDay.rawValue:
+                    todayEvents.append(e)
+                    break
+                case Interval.everyWeek.rawValue:
+                    
+                    break
+                case Interval.everyMonth.rawValue:
+                    if e.startDate.day == date.day {
+                        todayEvents.append(e)
+                    }
+                    break
+                case Interval.everyYear.rawValue:
+                    break
+                default:
+                    return
+                }
+            }
+        }
+        
+        tableView.reloadData()
+    }
+    
+    func compare(_ date1: Date, _ date2: Date) -> ComparisonResult {
+        return NSCalendar.current.compare(date1, to: date2, toGranularity: .day)
     }
     
 }
@@ -42,15 +81,14 @@ extension DayViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events?.count ?? 0
+        return todayEvents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DayTableViewCell.cellID) as! DayTableViewCell
         
-        if let event = events?[indexPath.row] {
-            cell.titleLabel.text = event.title
-        }
+        let event = todayEvents[indexPath.row]
+        cell.setup(with: event)
         
         return cell
     }
@@ -72,9 +110,7 @@ extension DayViewController: UITableViewDataSource, UITableViewDelegate {
             return
         }
         
-        guard let event = events?[indexPath.row] else {
-            return
-        }
+        let event = todayEvents[indexPath.row]
         
         DispatchQueue.main.async {
             Alert.showActionSheet(vc: baseVC, title: nil, message: "Выберите действие", actions: [

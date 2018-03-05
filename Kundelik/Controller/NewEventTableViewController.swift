@@ -68,6 +68,10 @@ class NewEventTableViewController: UITableViewController {
             endDateLabel.text = endDate
             endDateLabel.isHidden = false
         }
+        
+        if let e = event, e.canSave() {
+            addButton.isEnabled = true
+        }
     }
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
@@ -99,14 +103,19 @@ class NewEventTableViewController: UITableViewController {
 extension NewEventTableViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let text = textField.text, text.count > 0 {
-            event?.title = text
-            addButton.isEnabled = true
+        if let event = event, let text = textField.text, text.count > 0 {
+            event.title = text
+            addButton.isEnabled = event.canSave()
         }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
+        addButton.isEnabled = false
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
     }
     
 }
