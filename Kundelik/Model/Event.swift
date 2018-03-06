@@ -26,7 +26,7 @@ final class Event: Object {
     @objc dynamic var startTime: Date? = nil
     @objc dynamic var endTime: Date? = nil
 
-    @objc dynamic let startDate = Date()
+    @objc dynamic var startDate: Date? = nil
     @objc dynamic var endDate: Date? = nil
     
     @objc dynamic var interval: Int = Interval.never.rawValue

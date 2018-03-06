@@ -26,16 +26,18 @@ class NewEventTableViewController: UITableViewController {
     
     var delegate: NewEventProtocol?
     
+    var currentDate: Date?
     var event: Event?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(currentDate)
         setEmptyBackButton()
         addButton.isEnabled = false
         
         if event == nil {
             event = Event()
+            event!.startDate = currentDate
         }
     }
     

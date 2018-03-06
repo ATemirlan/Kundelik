@@ -68,8 +68,12 @@ class BaseViewController: UIViewController, WeekPageControllerDelegate, DayPageC
         performSegue(withIdentifier: CalendarViewController.segueID, sender: choosedDate)
     }
     
+    @IBAction func loginToKundelik(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: KundelikViewController.segueID, sender: nil)
+    }
+    
     @IBAction func addNewEvent(_ sender: UIButton) {
-        performSegue(withIdentifier: "NewEventNavigationController", sender: nil)
+        performSegue(withIdentifier: "NewEventNavigationController", sender: choosedDate)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -84,6 +88,7 @@ class BaseViewController: UIViewController, WeekPageControllerDelegate, DayPageC
             for vc in navvc.viewControllers {
                 if vc.className == NewEventTableViewController.className {
                     (vc as! NewEventTableViewController).delegate = self
+                    (vc as! NewEventTableViewController).currentDate = sender as? Date
                 }
             }
         }

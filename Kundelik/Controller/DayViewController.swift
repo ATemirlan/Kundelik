@@ -27,12 +27,14 @@ class DayViewController: UIViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: DayTableViewCell.nibName, bundle: nil),
                            forCellReuseIdentifier: DayTableViewCell.cellID)
+        
+        filterEvents()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         delegate?.set(current: self)
-        filterEvents()
+//        filterEvents()
     }
     
     func filterEvents() {
@@ -43,24 +45,39 @@ class DayViewController: UIViewController {
         todayEvents = List<Event>()
 
         for e in events {
-            e.dump()
-            if (compare(e.startDate, date) == .orderedAscending && compare(e.endDate!, date) == .orderedDescending) || compare(e.startDate, date) == .orderedSame {
+//            e.dump()
+            if (compare(e.startDate!, date) == .orderedAscending && compare(e.endDate!, date) == .orderedDescending) ||
+                compare(e.startDate!, date) == .orderedSame {
                 switch e.interval {
-                case Interval.everyDay.rawValue:
-                    todayEvents.append(e)
-                    break
-                case Interval.everyWeek.rawValue:
-                    
-                    break
-                case Interval.everyMonth.rawValue:
-                    if e.startDate.day == date.day {
+                case Interval.never.rawValue: // done
+                    if compare(e.startDate!, date) == .orderedSame {
                         todayEvents.append(e)
                     }
                     break
-                case Interval.everyYear.rawValue:
+                case Interval.everyDay.rawValue: // done
+                    todayEvents.append(e)
                     break
-                default:
-                    return
+                case Interval.everyWeek.rawValue: // done
+                    if e.startDate?.dayOfWeek() == date.dayOfWeek() {
+                        todayEvents.append(e)
+                    }
+                    break
+                case Interval.everyMonth.rawValue: // done
+                    if e.startDate!.day == date.day {
+                        todayEvents.append(e)
+                    }
+                    break
+                case Interval.everyYear.rawValue: // done
+                    if e.startDate!.day == date.day, e.startDate!.month == date.month {
+                        todayEvents.append(e)
+                    }
+                    break
+                default: // here parse days of week
+                    if String(e.interval).contains(String(date.dayNumberOfWeek())) {
+                        todayEvents.append(e)
+                    }
+                    
+                    break
                 }
             }
         }
@@ -114,10 +131,6 @@ extension DayViewController: UITableViewDataSource, UITableViewDelegate {
         
         DispatchQueue.main.async {
             Alert.showActionSheet(vc: baseVC, title: nil, message: "Выберите действие", actions: [
-                UIAlertAction(title: "Изменить", style: .default, handler: { (action) in
-                    Router.showChangeViewController(event: event, at: self)
-                }),
-                
                 UIAlertAction(title: "Удалить", style: .destructive, handler: { (action) in
                     RealmController.shared.remove(event: event)
                     baseVC.newEventAdded()

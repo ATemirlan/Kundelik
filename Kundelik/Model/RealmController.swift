@@ -26,6 +26,10 @@ class RealmController {
     }
     
     func add(event: Event) {
+        if event.endDate == nil {
+            event.endDate = Date().yearsAfter.yearsAfter
+        }
+        
         do {
             try realm?.write {
                 realm?.add(event)
@@ -41,7 +45,7 @@ class RealmController {
             return
         }
         
-        completion(events)
+        completion(events.sorted(byKeyPath: "startTime", ascending: true))
     }
     
     func remove(event: Event) {

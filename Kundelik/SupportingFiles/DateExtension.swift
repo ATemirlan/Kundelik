@@ -100,4 +100,25 @@ extension Date {
         return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self)!
     }
     
+    func dayOfWeek() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        return dateFormatter.string(from: self).capitalized
+    }
+    
+    func dayNumberOfWeek() -> Int {
+        guard let num = Calendar.current.dateComponents([.weekday], from: self).weekday else {
+            return 0
+        }
+        
+        switch num {
+        case 2, 3, 4, 5, 6, 7:
+            return num - 1
+        case 1:
+            return 7
+        default:
+            return 0
+        }
+    }
+    
 }

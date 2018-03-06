@@ -165,7 +165,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="profile" id="elL-CU-ovg">
                             <connections>
-                                <segue destination="yA0-Ur-XZm" kind="show" id="3k0-SI-QDV"/>
+                                <action selector="loginToKundelik:" destination="BYZ-38-t0r" id="S54-NT-R0z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -174,6 +174,7 @@
                         <outlet property="weekContainer" destination="ADf-HE-vic" id="818-fr-CQl"/>
                         <segue destination="50y-zD-4Yb" kind="presentation" identifier="CalendarViewController" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="ady-O7-ZV5"/>
                         <segue destination="YsF-jN-KbE" kind="presentation" identifier="NewEventNavigationController" id="yvP-f2-JCK"/>
+                        <segue destination="i1Y-v1-5W4" kind="presentation" identifier="KundelikViewController" id="Jr8-GT-HoW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -650,27 +651,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" tag="-4" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="BNc-nI-jbJ">
-                                        <rect key="frame" x="0.0" y="291" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BNc-nI-jbJ" id="VJY-8g-7nU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Каждые 2 недели" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjg-4t-kDF">
-                                                    <rect key="frame" x="16" y="12" width="134" height="20"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="zjg-4t-kDF" firstAttribute="centerY" secondItem="VJY-8g-7nU" secondAttribute="centerY" id="XWZ-HB-Vrj"/>
-                                                <constraint firstItem="zjg-4t-kDF" firstAttribute="leading" secondItem="VJY-8g-7nU" secondAttribute="leading" constant="16" id="hOJ-c4-Kun"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" tag="-5" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="LBE-sL-Uds">
-                                        <rect key="frame" x="0.0" y="335" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="291" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LBE-sL-Uds" id="CEi-mw-bxi">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -689,7 +671,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" tag="-6" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="SNi-it-USe">
-                                        <rect key="frame" x="0.0" y="379" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="335" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SNi-it-USe" id="eFI-u5-EDT">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -927,35 +909,6 @@
             </objects>
             <point key="canvasLocation" x="-550" y="2641"/>
         </scene>
-        <!--Профиль-->
-        <scene sceneID="d1C-0q-rss">
-            <objects>
-                <viewController title="Профиль" id="yA0-Ur-XZm" customClass="ProfileViewController" customModule="Kundelik" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZvD-eu-Gji">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2W-zs-hXk">
-                                <rect key="frame" x="118" y="80" width="138" height="30"/>
-                                <state key="normal" title="Войти в Kundelik.kz"/>
-                                <connections>
-                                    <action selector="loginToKundelik:" destination="yA0-Ur-XZm" eventType="touchUpInside" id="Awm-Mr-nPu"/>
-                                    <segue destination="i1Y-v1-5W4" kind="presentation" id="Gza-et-uwq"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="P2W-zs-hXk" firstAttribute="top" secondItem="aVb-iu-UQd" secondAttribute="top" constant="16" id="9mQ-U6-Ri6"/>
-                            <constraint firstItem="P2W-zs-hXk" firstAttribute="centerX" secondItem="aVb-iu-UQd" secondAttribute="centerX" id="uA0-BY-tpl"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="aVb-iu-UQd"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N1C-Ea-OHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1215" y="358"/>
-        </scene>
         <!--Kundelik View Controller-->
         <scene sceneID="tTB-iv-tkV">
             <objects>
@@ -1120,7 +1073,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9HL-38-Udk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2049" y="358"/>
+            <point key="canvasLocation" x="1337" y="358"/>
         </scene>
         <!--Ib Calendar Data Source-->
         <scene sceneID="zkL-Dg-umW">

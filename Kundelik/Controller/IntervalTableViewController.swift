@@ -97,7 +97,7 @@ class IntervalTableViewController: UITableViewController {
         case 0:
             return daysSwitch.isOn ? 2 : 1
         default:
-            return 6
+            return 5
         }
     }
     
